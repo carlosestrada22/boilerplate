@@ -47,7 +47,7 @@
         "eqeqeq": "error",
         "no-nested-ternary": "error",
         "no-unneeded-ternary": "error",
-        "semi": "error",
+        // "semi": "error",
         "id-length": "error",
         "camelcase": "error",
         "new-cap": "error"

@@ -18,6 +18,7 @@ module.exports = {
         rules: [
             {
                 test: /\.scss$/,
+                exclude: /node_modules/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: [{
@@ -46,7 +47,12 @@ module.exports = {
                     }
 
                 }, "pug-html-loader"]
+            },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                loader: 'file?name=public/fonts/[name].[ext]'
             }
+
         ]
     },
     plugins: [
