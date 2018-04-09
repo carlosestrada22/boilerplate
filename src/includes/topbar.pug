@@ -1,0 +1,35 @@
+#topbar-container.topbar-container
+    .inner-bar
+        .block-1
+            .contact-detail
+                .contact-us-block.sub-block
+                    .entry
+                        -let phone = "+55 3312816635"
+                        b contact us:&nbsp;
+                        a(href="tel:+#{phone}") #{phone}
+                .email-block.sub-block
+                    .entry
+                        -let mail = "carlosg.estrada94@gmail.com"
+                        b Email&nbsp;
+                            a(href="#{mail}") #{mail}
+        .block-2
+            .login-block.sub-block
+                .entry
+                    a
+                        b login
+                    span &nbsp;or&nbsp;
+                    a
+                        b register
+            .language-block.sub-block
+                .entry
+                    a
+                        b en&nbsp;
+                          i.fa.fa-chevron-down 
+            .favorites-block.sub-block
+                .entry
+                    a
+                        i.fa.fa-heart-o(aria-hidden="true")
+            .cart-block.sub-block
+                .entry
+                    a
+                        i.fa.fa-shopping-cart

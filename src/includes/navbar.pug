@@ -1,0 +1,14 @@
+#navbar.navbar
+    .logo
+        span logo
+    .menu   
+        - var list = ["Home", "About Us", "Products", "Services", "Blog", "Gallery", "Pages", "Contact"]
+        ul.list
+                each val in list
+                    li.item
+                        a=val
+                    
+                li.item.item-search
+                    i.fa.fa-search
+                            
+
