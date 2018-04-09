@@ -1,9 +1,196 @@
+@import "utilities/_variables.scss";
+
+@import url("https://fonts.googleapis.com/css?family=Questrial");
+
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
 body {
-    background: green;
-    p {
-        color: blue;
+    margin: 0;
+    background: $white;
+
+    a {
+        cursor: pointer;
     }
-    h1 {
-        color: black;
+
+    a .fa {
+        transition: all .15s;
+        -webkit-transition: all .15s;
+    }
+
+    * {
+        font-family: Questrial, sans-serif;
+    }
+
+    a:-webkit-any-link {
+        text-decoration: none;
+        color: unset;
+    }
+
+    .app {
+        display: flex;
+        flex-direction: column;
+        li:hover {
+            color: #b8cd06;
+        }
+
+        .topbar-container {
+            height: 60px;
+            box-sizing: border-box;
+            padding: 0 $paddingLanding;
+
+            .inner-bar {
+                background: $white;
+                display: flex;
+                height: 100%;
+                justify-content: space-between;
+
+                .block-1 {
+                    flex: 4;
+
+                    .contact-detail {
+                        display: inline-block;
+                        width: 100%;
+                        height: 100%;
+
+                        .sub-block {
+                            // width: 200px;
+                            padding: 0 25px;
+                            max-width: 250px;
+                            height: 100%;
+                        }
+
+                        .contact-us-block {
+                            float: left;
+                        }
+
+                        .email-block {
+                            flex: .2;
+                        }
+                    }
+                }
+
+                .block-2 {
+                    flex: 2;
+                    display: flex;
+                    height: 100%;
+
+                    .login-block {
+                        flex: 2;
+                    }
+
+                    .language-block {
+                        flex: 1;
+                    }
+
+                    .favorites-block {
+                        flex: 1;
+                    }
+
+                    .cart-block {
+                        flex: 2;
+                    }
+                }
+
+                .sub-block {
+                    display: flex;
+                    border-left: solid 1px $borderGrey;
+
+                    .entry {
+                        margin: auto;
+                        font-size: 10px;
+                        color: $grey;
+                        text-transform: uppercase;
+
+                        .fa {
+                            font-size: 20px;
+                            display: inline-block;
+                            vertical-align: bottom;
+                            color: $greyDark;
+                            position: relative;
+                            top: -1px;
+                        }
+
+                        .fa-chevron-down {
+                            font-size: 10px;
+                        }
+                    }
+                }
+
+                .sub-block:last-child {
+                    border-right: 1px solid $borderGrey;
+                }
+            }
+        }
+
+        .navbar {
+            background: $white;
+            height: 98px;
+            display: inline-block;
+            padding: 0 $paddingLanding;
+            border-top: solid 1px $borderGrey;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+            .logo {
+                float: left;
+            }
+
+            .menu {
+                float: right;
+                width: 50%;
+                height: 100%;
+
+                .list {
+                    height: 100%;
+                    margin: 0;
+                    display: flex;
+                    list-style: none;
+
+                    .item {
+                        flex: .1;
+                        display: flex;
+                        margin: auto;
+                        height: 32px;
+
+                        * {
+                            margin: auto;
+                        }
+
+                        a {
+                            font-weight: 700;
+                            font-size: 11px;
+                            line-height: 16px;
+                        }
+                    }
+
+                    .item:hover:not(.item-search) {
+                        background-color: #b8cd06;
+                        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+                        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+                        color: #fff;
+                        border-radius: 16px;
+                        -webkit-border-radius: 16px;
+                    }
+                    .item-search {
+                        flex: none;
+                    }
+                }
+            }
+        }
+
+        .main-slider {
+            background: $orange;
+            height: 600px;
+        }
+
+        .banner-1 {
+            background: $purple;
+            height: 400px;
+        }
+
+        .footer {
+            background: $black;
+            height: 600px;
+            color: $white;
+        }
     }
 }
